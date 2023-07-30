@@ -19,9 +19,9 @@ public class PlayerMovement : MonoBehaviour
         Vector2 MoveDirection = new Vector2(HorizontalMove, VerticalMove);
         transform.Translate(MoveDirection * speed * Time.deltaTime, Space.World);
         MoveDirection.Normalize();
-        /*if (MoveDirection != Vector2.zero)  
+        if (MoveDirection != Vector2.zero)  
         {
-            transform.forward = MoveDirection;
-        }*/
+            transform.up = MoveDirection;
+        }
     }
 }
